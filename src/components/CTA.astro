@@ -1,4 +1,6 @@
 ---
 import {url} from '../data/site';
+
+import copy from '../content/cta.json';
 ---
-<section class="cta wrap"><p class="eyebrow">LET'S MAKE WORDS WORK.</p><div><h2>下一篇好內容，<br/>從聊聊開始。</h2><a class="round-link" href={url('contact/')} aria-label="開始合作洽詢">↗</a></div><p>告訴我您的品牌、讀者與目標，一起找到合適的內容方向。</p></section>
+<section class="cta wrap"><p class="eyebrow">LET'S MAKE WORDS WORK.</p><div><h2>{copy.text1}<br/>{copy.text2}</h2><a class="round-link" href={url('contact/')} aria-label="開始合作洽詢">↗</a></div><p>{copy.text3}</p></section>

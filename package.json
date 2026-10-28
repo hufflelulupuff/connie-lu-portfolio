@@ -3,7 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {"dev":"astro dev --host 127.0.0.1", "build":"astro build", "preview":"astro preview --host 127.0.0.1", "check":"astro check", "test":"node scripts/verify.mjs"},
-  "dependencies": {"astro":"^6.0.0", "@astrojs/sitemap":"^3.6.0"},
-  "devDependencies": {"@astrojs/check":"^0.9.4", "typescript":"^5.9.0"}
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "node scripts/validate-content.mjs && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "node scripts/validate-content.mjs && astro check",
+    "test": "node scripts/test-cms.mjs && node scripts/verify.mjs",
+    "validate:content": "node scripts/validate-content.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.0.0",
+    "@astrojs/sitemap": "^3.6.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.0"
+  }
 }

@@ -1,0 +1,928 @@
+{
+  "media": {
+    "input": "public/media",
+    "output": "/media",
+    "extensions": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp"
+    ],
+    "rename": "safe"
+  },
+  "content": [
+    {
+      "name": "projects",
+      "label": "作品案例（新增／修改／下架）",
+      "type": "collection",
+      "path": "src/content/projects",
+      "format": "json",
+      "filename": "{fields.slug}.json",
+      "subfolders": false,
+      "view": {
+        "primary": "brand",
+        "fields": [
+          "brand",
+          "title",
+          "category",
+          "published"
+        ],
+        "sort": [
+          "order",
+          "brand"
+        ],
+        "default": {
+          "sort": "order",
+          "order": "asc"
+        }
+      },
+      "fields": [
+        {
+          "name": "slug",
+          "label": "網址代稱（發布後不要更改）",
+          "type": "string",
+          "required": true,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        {
+          "name": "published",
+          "label": "顯示於網站",
+          "type": "boolean",
+          "required": true,
+          "description": "關閉可從網站下架。注意：儲存庫公開，所有儲存的文字與圖片仍可被讀取，請勿儲存未授權原稿。"
+        },
+        {
+          "name": "order",
+          "label": "排序（小數字在前）",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "issue",
+          "label": "案例編號，例如 01",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "brand",
+          "label": "品牌／作品名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "案例主標題（可換行）",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "分類",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": [
+              {
+                "name": "banquet",
+                "label": "尾牙春酒"
+              },
+              {
+                "name": "seasonal",
+                "label": "節慶餐飲"
+              },
+              {
+                "name": "wedding",
+                "label": "好婚市集"
+              }
+            ]
+          }
+        },
+        {
+          "name": "label",
+          "label": "短標籤，例如 春節圍爐 × 內容整合",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "intro",
+          "label": "案例介紹",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "audience",
+          "label": "目標讀者",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "intent",
+          "label": "搜尋主題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "structure",
+          "label": "文章架構",
+          "type": "string",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        },
+        {
+          "name": "focus",
+          "label": "內容溝通重點",
+          "type": "text",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        },
+        {
+          "name": "color",
+          "label": "插畫配色",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": [
+              {
+                "name": "sand",
+                "label": "米色"
+              },
+              {
+                "name": "slate",
+                "label": "灰綠"
+              },
+              {
+                "name": "rust",
+                "label": "暖棕"
+              },
+              {
+                "name": "blue",
+                "label": "淺藍"
+              }
+            ]
+          }
+        },
+        {
+          "name": "coverImage",
+          "label": "自訂封面（不選即使用插畫）",
+          "type": "image",
+          "required": false,
+          "description": "僅上傳有權公開的圖片。"
+        },
+        {
+          "name": "coverAlt",
+          "label": "封面圖片說明",
+          "type": "string",
+          "required": false,
+          "description": "上傳圖片時必填，供無法看到圖片的讀者使用。"
+        },
+        {
+          "name": "originalUrl",
+          "label": "已驗證原文網址",
+          "type": "string",
+          "required": false,
+          "pattern": "^https://[^\\s]+$",
+          "description": "沒有公開網址請留空，不要填私人 Drive 連結。"
+        },
+        {
+          "name": "excerptApproved",
+          "label": "已取得此節錄的公開授權",
+          "type": "boolean",
+          "required": true,
+          "description": "只有勾選且填寫節錄才會在網站顯示。"
+        },
+        {
+          "name": "excerpt",
+          "label": "可公開的文章節錄",
+          "type": "text",
+          "required": false,
+          "description": "所有儲存內容都會寫入公開儲存庫；未授權內容請不要貼入，即使未勾選上方開關。"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "label": "網站名稱、信箱與搜尋描述",
+      "type": "file",
+      "path": "src/content/settings.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "name",
+          "label": "網站名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "合作信箱",
+          "type": "string",
+          "required": true,
+          "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+        },
+        {
+          "name": "description",
+          "label": "搜尋結果與社群分享描述",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "首頁",
+      "type": "file",
+      "path": "src/content/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "text1",
+          "label": "1. 讓品牌被搜尋，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 真正讀懂。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 我是 Connie，以旅宿餐飲的品牌經驗為底，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text4",
+          "label": "4. 寫出回應搜尋需求、也保有品牌溫度的內容。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text5",
+          "label": "5. 探索精選作品",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text6",
+          "label": "6. SEO 文章撰寫",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text7",
+          "label": "7. 內容策略規劃",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text8",
+          "label": "8. 品牌行銷思維",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text9",
+          "label": "9. 文字背後，是對需求的理解。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text10",
+          "label": "10. 所有作品 ↗",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text11",
+          "label": "11. 從「讀者為什麼搜尋」出發，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text12",
+          "label": "12. 到「品牌如何回答」，讓每一段內容都有方向。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text13",
+          "label": "13. 懂內容，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text14",
+          "label": "14. 也懂品牌的日常。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text15",
+          "label": "15. 認識 Connie ↗",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text16",
+          "label": "16. 七年以上旅宿與餐飲產業經驗，讓我習慣從真實的服務場景…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text17",
+          "label": "17. 從品牌企劃、SEO 落地頁到節慶活動，將分散的資訊整…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text18",
+          "label": "18. 從一篇文章，到完整的內容方向。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "headlinePrefix",
+          "label": "主標題第二行前綴",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "label": "關於我",
+      "type": "file",
+      "path": "src/content/about.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "seoTitle",
+          "label": "此頁搜尋標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text1",
+          "label": "1. ABOUT / 關於我",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 文字是入口，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 理解才是起點。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text4",
+          "label": "4. 你好，我是 Connie。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text5",
+          "label": "5. 以 SEO 寫作為主軸，讓品牌的好，出現在讀者需要的…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text6",
+          "label": "6. 我累積了七年以上飯店與餐飲產業經驗，參與飯店新館開幕…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text7",
+          "label": "7. 在品牌端的日常裡，我習慣面對不同的資訊與需求：服務有…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text8",
+          "label": "8. 比起堆疊關鍵字，我更在意一篇文章是否回答了問題、資訊…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text9",
+          "label": "9. 透過作品認識我的內容思維 ↗",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text10",
+          "label": "10. 讓文字多一層理解。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text11",
+          "label": "11. 品牌行銷視角",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text12",
+          "label": "12. 從品牌定位到活動訊息，讓網站、社群與內容維持一致的溝…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text13",
+          "label": "13. 跨部門整合經驗",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text14",
+          "label": "14. 整理營運、餐飲與行銷端的資訊，把服務細節轉譯成讀者看…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text15",
+          "label": "15. GA4 數據視角",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text16",
+          "label": "16. 將內容目標與網站行為的觀察一起討論。分析範圍依資料權…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text17",
+          "label": "17. 公開實例待補，不展示內部報表。",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "services",
+      "label": "服務內容",
+      "type": "file",
+      "path": "src/content/services.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "seoTitle",
+          "label": "此頁搜尋標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text1",
+          "label": "1. SERVICES / 合作服務",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 把您的專業，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 寫成讀者的答案。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text4",
+          "label": "4. 以 SEO 寫作為核心，依品牌階段與內容目標，規劃合…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text5",
+          "label": "5. 可討論的交付內容",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text6",
+          "label": "6. 清楚的溝通，是好內容的開始。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text7",
+          "label": "7. 合作前，您可能想知道",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text8",
+          "label": "8. 費用如何計算？",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text9",
+          "label": "9. 不公開固定價目，會依內容類型、篇數、資料完整度、研究…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text10",
+          "label": "10. 需要先提供哪些資料？",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text11",
+          "label": "11. 品牌或網站連結、服務或產品資訊、目標讀者、預計篇數與…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text12",
+          "label": "12. 可以保證搜尋排名嗎？",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text13",
+          "label": "13. 合作聚焦內容品質、搜尋意圖與資訊結構；搜尋表現還受網…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text14",
+          "label": "14. 能否提供 GA4 分析？",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text15",
+          "label": "15. 可於需求階段討論內容相關的行為觀察與指標，實際分析範…",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "label": "合作洽詢",
+      "type": "file",
+      "path": "src/content/contact.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "seoTitle",
+          "label": "此頁搜尋標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text1",
+          "label": "1. CONTACT / 合作洽詢",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 您的下一篇內容，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 我們一起開始。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text4",
+          "label": "4. 不必先有完整企劃。從品牌、目標與一個想解決的問題開始…",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text5",
+          "label": "5. 直接寫信給我",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text6",
+          "label": "6. 合作費用依需求個別報價。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text7",
+          "label": "7. 填寫右側需求可產生郵件草稿；本站不接收或儲存表單資料…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text8",
+          "label": "8. 稱呼／品牌名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text9",
+          "label": "9. 需要的協助",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text10",
+          "label": "10. SEO 文章撰寫",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text11",
+          "label": "11. 網站與品牌內容",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text12",
+          "label": "12. 內容策略與優化",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text13",
+          "label": "13. 尚未確定，想先討論",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text14",
+          "label": "14. 品牌或網站連結",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text15",
+          "label": "15. 簡單說說需求",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text16",
+          "label": "16. 產生 Email 草稿",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text17",
+          "label": "17. 郵件草稿（可手動複製）",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text18",
+          "label": "18. 用郵件程式開啟草稿 ↗",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text19",
+          "label": "19. 請直接點選左側信箱，將需求寄給 Connie。",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "work",
+      "label": "作品列表",
+      "type": "file",
+      "path": "src/content/work.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "seoTitle",
+          "label": "此頁搜尋標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text1",
+          "label": "1. SELECTED WORK / 作品集",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 有需求的地方，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 就有好內容的起點。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text4",
+          "label": "4. 旅宿、餐飲與生活情境，從搜尋意圖走進品牌故事。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text5",
+          "label": "5. 全部作品",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text6",
+          "label": "6. 尾牙春酒",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text7",
+          "label": "7. 節慶餐飲",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text8",
+          "label": "8. 好婚市集",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text10",
+          "label": "10. 好婚市集 SEO 作品區",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text11",
+          "label": "11. 作品整理中。待補可驗證文章網址、作者署名或參與角色，…",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "text12",
+          "label": "12. 目前尚無已核實的文章可供展示。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text13",
+          "label": "13. 好婚市集作品整理中，待補可驗證文章資料。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text14",
+          "label": "14. 案例為原稿的結構與主題整理。封面為原創示意插畫，非品…",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "cta",
+      "label": "頁尾合作邀請",
+      "type": "file",
+      "path": "src/content/cta.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "text1",
+          "label": "1. 下一篇好內容，",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text2",
+          "label": "2. 從聊聊開始。",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "text3",
+          "label": "3. 告訴我您的品牌、讀者與目標，一起找到合適的內容方向。",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "service-items",
+      "label": "服務項目與交付內容",
+      "type": "file",
+      "path": "src/content/service-items.json",
+      "format": "json",
+      "list": true,
+      "fields": [
+        {
+          "name": "n",
+          "label": "編號",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "服務名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "en",
+          "label": "英文標籤",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "desc",
+          "label": "服務介紹",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "items",
+          "label": "交付內容",
+          "type": "string",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "home-services",
+      "label": "首頁服務摘要",
+      "type": "file",
+      "path": "src/content/home-services.json",
+      "format": "json",
+      "list": true,
+      "fields": [
+        {
+          "name": "n",
+          "label": "編號",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "t",
+          "label": "名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "d",
+          "label": "說明",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "process",
+      "label": "合作流程",
+      "type": "file",
+      "path": "src/content/process.json",
+      "format": "json",
+      "list": true,
+      "fields": [
+        {
+          "name": "n",
+          "label": "編號",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "t",
+          "label": "名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "d",
+          "label": "說明",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "wushan-reunion",
+  "title": "從一桌年菜，\n寫到一家人的團圓。",
+  "brand": "烏山拾味・烏日璞旅",
+  "category": "seasonal",
+  "label": "春節圍爐 × 內容整合",
+  "intro": "以春節團圓的用餐情境為起點，整合內用、外帶與不同家庭人數的資訊，讓複雜的節慶方案更容易閱讀。",
+  "audience": "家庭聚餐、返鄉親友與年菜需求者",
+  "intent": "台中團圓飯、烏日圍爐、外帶年菜",
+  "structure": [
+    "春節團聚與備餐需求",
+    "用餐空間與菜色介紹",
+    "內用、外帶與預訂資訊",
+    "交通、住宿與常見問題"
+  ],
+  "focus": [
+    "以團聚情境串起菜色、空間與交通資訊。",
+    "分開呈現不同用餐方式，降低資訊混雜。",
+    "用 FAQ 補足付款、飲食需求與取餐等實際問題。"
+  ],
+  "color": "rust",
+  "issue": "03",
+  "originalUrl": null,
+  "excerpt": null,
+  "excerptApproved": false,
+  "published": true,
+  "order": 3,
+  "coverImage": "",
+  "coverAlt": ""
+}

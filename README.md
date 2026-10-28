@@ -42,13 +42,15 @@ pnpm preview
 
 ## 編輯內容
 
-- `src/data/site.ts`：品牌、信箱與網址路徑工具。
-- `src/data/projects.ts`：案例資料、篩選分類、原文連結、節錄授權欄位。
+- `src/content/settings.json`：品牌、信箱與搜尋描述。
+- `src/content/projects/*.json`：案例內容、分類、原文連結、節錄與顯示設定。
 - `src/styles/global.css`：配色、版面、手機版及減少動態效果設定。
 - `src/components/Cover.astro`：原創 CSS 編輯封面，不含品牌實景照片。
 - `public/og.png`：1200 × 630 分享圖；品牌改名時請同步更新。
 
-新增案例後須更新 `scripts/verify.mjs` 中頁數與 sitemap 數量。首頁目前展示資料前四筆。
+內容後台使用 Pages CMS；請見 [EDITING.md](EDITING.md)。新增／下架作品會自動更新頁數、篩選數量與 sitemap，不必修改程式碼。首頁依排序展示已發布案例。
+
+`.pages.yml` 是以 JSON 語法儲存的有效 YAML，包含 11 個表單區；不會輸出到公開網站。`scripts/validate-content.mjs` 驗證所有內容，發布失敗時保留上一版網站。
 
 ## 公開內容原則
 
