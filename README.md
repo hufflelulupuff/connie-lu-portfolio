@@ -67,4 +67,5 @@ Email 使用舊站公開信箱 19aoi95@gmail.com。聯絡表單只在瀏覽器�
 - 原站：https://19aoi95.wixsite.com/connielustudio
 - Astro Pages 官方說明：https://docs.astro.build/en/guides/deploy/github/
 
-尚未連線 GitHub 或公開部署；需登入、指定 repository 並授權發布後才能進行。
+已於 2026-10-28 發布：https://hufflelulupuff.github.io/connie-lu-portfolio/ 。儲存庫：https://github.com/hufflelulupuff/connie-lu-portfolio 。推送 main 後將自動重新建置與發布。
+

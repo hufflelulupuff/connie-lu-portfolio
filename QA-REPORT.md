@@ -20,7 +20,8 @@
 
 - 瀏覽器的 viewport 覆寫未實際套用；iframe 內的點擊操作遭工具拒絕。因此手機選單的實際點擊尚未完成瀏覽器驗證，需在真機補驗；桌面篩選與表單互動已測。
 - 尚未進行真機 Safari / Android、螢幕閱讀器或 Lighthouse 測試。
-- GitHub CLI 未登入，沒有建立遠端儲存庫、推送或公開部署；Actions 部署需在使用者授權的 repository 執行後確認。
+- GitHub Actions 建置與部署已於 2026-10-28 通過。執行紀錄：https://github.com/hufflelulupuff/connie-lu-portfolio/actions/runs/40634360359 。正式首頁、作品列表、案例頁、Contact、robots、sitemap 與 OG 圖均回應 HTTP 200；正式 canonical 正確且沒有 noindex。
 - 原文連結、節錄授權及好婚市集實際作品仍待使用者補充。沒有將待補內容假裝為已完成作品。
 
 本機 `dist/` 為 noindex 預覽建置。正式 Actions 會依儲存庫資訊重新產生 canonical、sitemap 與索引設定，請勿把本機佔位網址的 dist 直接當作正式發布版本。
+
