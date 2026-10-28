@@ -1,0 +1,6 @@
+---
+import Cover from './Cover.astro'; import {url} from '../data/site'; import type {Project} from '../data/projects';
+interface Props {project:Project;}
+const {project:p}=Astro.props;
+---
+<article class="project-card" data-category={p.category}><a href={url(`work/${p.slug}/`)}><Cover tone={p.color} issue={p.issue} brand={p.brand}/><div class="card-meta"><span>{p.label}</span><span>SEO WRITING</span></div><h3>{p.brand}<span aria-hidden="true">↗</span></h3><p>{p.title.replace('\n','')}</p></a></article>

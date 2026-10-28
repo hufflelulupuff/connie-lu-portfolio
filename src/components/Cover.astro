@@ -1,0 +1,5 @@
+---
+interface Props {tone?:string; issue?:string; brand?:string;}
+const {tone='sand',issue='01',brand='CONTENT NOTES'}=Astro.props;
+---
+<div class={`cover ${tone}`} aria-hidden="true"><div class="cover-top"><span>CONNIE LU. / EDITORIAL STUDIES</span><span>NO. {issue}</span></div><div class="paper"><span class="paper-kicker">HOSPITALITY & DINING</span><strong>{brand}</strong><div class="paper-rule"></div><span class="paper-title">Good stories.<br/>Meaningful<br/><em>connections.</em></span><span class="paper-foot">SEO CONTENT / SELECTED WORK</span></div><div class="plate"><div class="plate-inner"></div><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span></div><div class="cover-bottom"><span>從搜尋開始，讓故事發生。</span><span>CONTENT × STRATEGY</span></div></div>
