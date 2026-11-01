@@ -1,0 +1,32 @@
+{
+  "slug": "wuri-wedding-venue",
+  "title": "台中烏日婚宴，\n從交通、場地到宴席內容。",
+  "brand": "烏日璞旅",
+  "category": "wedding",
+  "label": "婚宴場地 × SEO 文章",
+  "intro": "以準新人挑選婚宴場地的需求為主線，整合交通、宴會空間、料理與方案資訊，安排成便於比較與洽詢的文章。",
+  "audience": "規劃台中婚宴與飯店婚禮的準新人",
+  "intent": "台中婚宴推薦、烏日婚宴、飯店婚禮",
+  "structure": [
+    "交通與親友住宿需求",
+    "宴會空間與設備",
+    "婚宴料理與方案整理",
+    "常見問題與洽詢資訊"
+  ],
+  "focus": [
+    "依新人選場地的考量安排資訊順序。",
+    "整合場地特色與實際籌備問題，兼顧搜尋需求與閱讀。"
+  ],
+  "color": "blue",
+  "issue": "07",
+  "order": 7,
+  "originalUrl": "https://www.boutechwurivillagehotel.com.tw/tw/article-wedding-01.html",
+  "excerpt": null,
+  "excerptApproved": false,
+  "published": true,
+  "role": "SEO 文章撰寫",
+  "coverImage": "/media/wuri-banquet-hall-source.webp",
+  "coverAlt": "烏日璞旅官網婚宴文章中的宴會廳實景，呈現桌席與室內空間",
+  "coverHeading": "飯店婚宴\n場地挑選",
+  "coverNote": "圖片來源：烏日璞旅官網"
+}

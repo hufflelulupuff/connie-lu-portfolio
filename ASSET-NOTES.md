@@ -67,3 +67,17 @@ Use case: photorealistic-natural. Asset type: portfolio editorial cover photogra
 ```
 
 
+
+## 原文圖片更新（2026-11-01）
+
+使用者確認這些文章由本人撰寫，並指示可直接使用文章圖片。本次將已公開作品封面換為原刊登頁圖片；不把圖片攝影歸屬於 Connie。原始圖片均保留來源，網站只做等比例縮圖與 WebP 壓縮。
+
+| 網站資產 | 文章來源 | 原圖網址 |
+| --- | --- | --- |
+| public/media/weddingday-cloud-dancer-source.webp | https://www.weddingday.com.tw/post/blog/article/2876 | https://rcdn.weddingday.com.tw/original/f18f978d44e13fcef1cae6c53de26e15_6c1a230ca6f25e14f35f3edbf9320c8072679104.jpg?width=1000 |
+| public/media/weddingday-europe-honeymoon-source.webp | https://www.weddingday.com.tw/post/blog/article/2900 | https://rcdn.weddingday.com.tw/original/e7a849ec9074cf61742667d45d7f9c95_78914f453c459192a0eb3cb68c6739f431149f72.png?width=1000 |
+| public/media/wuri-banquet-hall-source.webp | https://www.boutechwurivillagehotel.com.tw/tw/article-wedding-01.html | https://webbox.imgix.net/images/pqmrshjlkmmwxwja/56fb4665-3944-4d40-80c4-095dcb5aabdb.png?auto=format,compress&fit=crop&crop=entropy |
+
+烏日璞旅尾牙案例也使用同飯店官網宴會廳照，僅介紹場地，不宣稱照片為尾牙活動實拍。
+
+待補照片：大湖璞旅尾牙春酒、烏山拾味圍爐年菜、大湖璞旅春節聚餐。這三篇尚無公開原文網址可擷取對應照片，保留原有清楚標示的 AI 封面，等待使用者提供照片或原文。

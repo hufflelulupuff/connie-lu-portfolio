@@ -98,7 +98,7 @@
               },
               {
                 "name": "wedding",
-                "label": "好婚市集"
+                "label": "婚禮與蜜月"
               }
             ]
           }
@@ -844,7 +844,7 @@
         },
         {
           "name": "text8",
-          "label": "8. 好婚市集",
+          "label": "8. 婚禮與蜜月",
           "type": "string",
           "required": true
         },
