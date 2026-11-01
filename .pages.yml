@@ -76,6 +76,12 @@
           "required": true
         },
         {
+          "name": "role",
+          "label": "參與角色（已確認的工作範圍）",
+          "type": "string",
+          "required": false
+        },
+        {
           "name": "category",
           "label": "分類",
           "type": "select",
@@ -240,31 +246,31 @@
       "fields": [
         {
           "name": "text1",
-          "label": "1. 讓品牌被搜尋，",
+          "label": "1. 從理解產品開始，",
           "type": "string",
           "required": true
         },
         {
           "name": "text2",
-          "label": "2. 真正讀懂。",
+          "label": "2. 貼近讀者的好內容。",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 我是 Connie，以旅宿餐飲的品牌經驗為底，",
+          "label": "3. 我是 Connie，累積七年以上旅宿與餐飲產業經驗，",
           "type": "string",
           "required": true
         },
         {
           "name": "text4",
-          "label": "4. 寫出回應搜尋需求、也保有品牌溫度的內容。",
+          "label": "4. 提供 SEO 文章、品牌文案與網站內容撰寫，讓專業資訊讀來清楚，也保",
           "type": "string",
           "required": true
         },
         {
           "name": "text5",
-          "label": "5. 探索精選作品",
+          "label": "5. 看看我的作品",
           "type": "string",
           "required": true
         },
@@ -288,7 +294,7 @@
         },
         {
           "name": "text9",
-          "label": "9. 文字背後，是對需求的理解。",
+          "label": "9. 從旅宿餐飲，到婚禮與旅行。",
           "type": "string",
           "required": true
         },
@@ -300,25 +306,25 @@
         },
         {
           "name": "text11",
-          "label": "11. 從「讀者為什麼搜尋」出發，",
+          "label": "11. 先研究產品，也讀懂搜尋背後的問題，",
           "type": "string",
           "required": true
         },
         {
           "name": "text12",
-          "label": "12. 到「品牌如何回答」，讓每一段內容都有方向。",
+          "label": "12. 再用清楚的架構與自然的文字，寫出值得閱讀的內容。",
           "type": "string",
           "required": true
         },
         {
           "name": "text13",
-          "label": "13. 懂內容，",
+          "label": "13. 熟悉品牌的日常，",
           "type": "string",
           "required": true
         },
         {
           "name": "text14",
-          "label": "14. 也懂品牌的日常。",
+          "label": "14. 也在意文字的細節。",
           "type": "string",
           "required": true
         },
@@ -330,19 +336,19 @@
         },
         {
           "name": "text16",
-          "label": "16. 七年以上旅宿與餐飲產業經驗，讓我習慣從真實的服務場景…",
+          "label": "16. 七年以上旅宿與餐飲產業經驗，讓我熟悉品牌端的溝通需求，也習慣從服務現",
           "type": "text",
           "required": true
         },
         {
           "name": "text17",
-          "label": "17. 從品牌企劃、SEO 落地頁到節慶活動，將分散的資訊整…",
+          "label": "17. 動筆前，我會先研究產品與讀者需求，運用 AI 與搜尋數據輔助選題，再",
           "type": "text",
           "required": true
         },
         {
           "name": "text18",
-          "label": "18. 從一篇文章，到完整的內容方向。",
+          "label": "18. 您需要的內容，我可以這樣協助。",
           "type": "string",
           "required": true
         },
@@ -375,13 +381,13 @@
         },
         {
           "name": "text2",
-          "label": "2. 文字是入口，",
+          "label": "2. 寫作之前，",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 理解才是起點。",
+          "label": "3. 先把產品了解得更深。",
           "type": "string",
           "required": true
         },
@@ -393,79 +399,79 @@
         },
         {
           "name": "text5",
-          "label": "5. 以 SEO 寫作為主軸，讓品牌的好，出現在讀者需要的…",
+          "label": "5. 我喜歡把繁雜的資料整理清楚，找到產品值得細寫、讀者也真正關心的地方。",
           "type": "string",
           "required": true
         },
         {
           "name": "text6",
-          "label": "6. 我累積了七年以上飯店與餐飲產業經驗，參與飯店新館開幕…",
+          "label": "6. 我累積了七年以上飯店與餐飲產業經驗，參與新館開幕、餐飲品牌、宴會活動",
           "type": "text",
           "required": true
         },
         {
           "name": "text7",
-          "label": "7. 在品牌端的日常裡，我習慣面對不同的資訊與需求：服務有…",
+          "label": "7. 在品牌端工作，常要把營運、餐飲與行銷的不同資訊放在一起，釐清服務特色",
           "type": "text",
           "required": true
         },
         {
           "name": "text8",
-          "label": "8. 比起堆疊關鍵字，我更在意一篇文章是否回答了問題、資訊…",
+          "label": "8. 規劃 SEO 內容時，我會運用 GSC MCP、OpenSEO 與 ",
           "type": "text",
           "required": true
         },
         {
           "name": "text9",
-          "label": "9. 透過作品認識我的內容思維 ↗",
+          "label": "9. 看看我的文章與案例 ↗",
           "type": "string",
           "required": true
         },
         {
           "name": "text10",
-          "label": "10. 讓文字多一層理解。",
+          "label": "10. 品牌經驗，讓寫作多一份理解。",
           "type": "string",
           "required": true
         },
         {
           "name": "text11",
-          "label": "11. 品牌行銷視角",
+          "label": "11. 從品牌角度思考",
           "type": "string",
           "required": true
         },
         {
           "name": "text12",
-          "label": "12. 從品牌定位到活動訊息，讓網站、社群與內容維持一致的溝…",
+          "label": "12. 理解品牌定位、服務特色與溝通對象，讓文章、網站與活動訊息保有一致的語",
           "type": "string",
           "required": true
         },
         {
           "name": "text13",
-          "label": "13. 跨部門整合經驗",
+          "label": "13. 把分散資訊整理成篇",
           "type": "string",
           "required": true
         },
         {
           "name": "text14",
-          "label": "14. 整理營運、餐飲與行銷端的資訊，把服務細節轉譯成讀者看…",
+          "label": "14. 熟悉跨部門協作，能從不同單位的資料中釐清重點，把專業細節寫成讀者容易",
           "type": "string",
           "required": true
         },
         {
           "name": "text15",
-          "label": "15. GA4 數據視角",
+          "label": "15. 用數據輔助判斷",
           "type": "string",
           "required": true
         },
         {
           "name": "text16",
-          "label": "16. 將內容目標與網站行為的觀察一起討論。分析範圍依資料權…",
+          "label": "16. 結合搜尋表現與 GA4 行為觀察，討論內容的優化方向。讓經驗與數據相",
           "type": "string",
           "required": true
         },
         {
           "name": "text17",
-          "label": "17. 公開實例待補，不展示內部報表。",
+          "label": "17. 網站資料的分析範圍，依專案需求與授權確認。",
           "type": "string",
           "required": true
         }
@@ -492,31 +498,31 @@
         },
         {
           "name": "text2",
-          "label": "2. 把您的專業，",
+          "label": "2. 仔細研究，",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 寫成讀者的答案。",
+          "label": "3. 也好好寫作。",
           "type": "string",
           "required": true
         },
         {
           "name": "text4",
-          "label": "4. 以 SEO 寫作為核心，依品牌階段與內容目標，規劃合…",
+          "label": "4. 從產品研究、關鍵字選擇到文章架構與文字修整，依品牌需求，安排每一步內",
           "type": "string",
           "required": true
         },
         {
           "name": "text5",
-          "label": "5. 可討論的交付內容",
+          "label": "5. 可依需求安排的交付內容",
           "type": "string",
           "required": true
         },
         {
           "name": "text6",
-          "label": "6. 清楚的溝通，是好內容的開始。",
+          "label": "6. 從第一次討論，到文章完成。",
           "type": "string",
           "required": true
         },
@@ -534,7 +540,7 @@
         },
         {
           "name": "text9",
-          "label": "9. 不公開固定價目，會依內容類型、篇數、資料完整度、研究…",
+          "label": "9. 依內容類型、篇數、資料完整度、研究深度與交付時程個別報價。可以先聊聊",
           "type": "text",
           "required": true
         },
@@ -546,7 +552,7 @@
         },
         {
           "name": "text11",
-          "label": "11. 品牌或網站連結、服務或產品資訊、目標讀者、預計篇數與…",
+          "label": "11. 品牌或網站連結、產品與服務資料、目標讀者，以及預計篇數與交付日期。若",
           "type": "text",
           "required": true
         },
@@ -558,7 +564,7 @@
         },
         {
           "name": "text13",
-          "label": "13. 合作聚焦內容品質、搜尋意圖與資訊結構；搜尋表現還受網…",
+          "label": "13. 我會以搜尋需求、數據與內容品質作為研究依據。排名仍會受到網站狀況、競",
           "type": "text",
           "required": true
         },
@@ -570,7 +576,19 @@
         },
         {
           "name": "text15",
-          "label": "15. 可於需求階段討論內容相關的行為觀察與指標，實際分析範…",
+          "label": "15. 可以討論與內容有關的閱讀行為、互動與後續行動，協助釐清值得觀察的指標",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "methodTitle",
+          "label": "研究方式區塊標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "methodIntro",
+          "label": "研究方式區塊介紹",
           "type": "text",
           "required": true
         }
@@ -597,19 +615,19 @@
         },
         {
           "name": "text2",
-          "label": "2. 您的下一篇內容，",
+          "label": "2. 有想寫的主題，",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 我們一起開始。",
+          "label": "3. 歡迎找我聊聊。",
           "type": "string",
           "required": true
         },
         {
           "name": "text4",
-          "label": "4. 不必先有完整企劃。從品牌、目標與一個想解決的問題開始…",
+          "label": "4. 可以從一項產品、一篇文章，或一個還在整理的想法開始。告訴我您希望傳達",
           "type": "string",
           "required": true
         },
@@ -627,13 +645,13 @@
         },
         {
           "name": "text7",
-          "label": "7. 填寫右側需求可產生郵件草稿；本站不接收或儲存表單資料…",
+          "label": "7. 填寫右側需求可產生郵件草稿；本站不接收或儲存表單資料。您仍需在郵件程",
           "type": "text",
           "required": true
         },
         {
           "name": "text8",
-          "label": "8. 稱呼／品牌名稱",
+          "label": "8. 稱呼／品牌名稱 ",
           "type": "string",
           "required": true
         },
@@ -669,19 +687,19 @@
         },
         {
           "name": "text14",
-          "label": "14. 品牌或網站連結",
+          "label": "14. 品牌或網站連結 ",
           "type": "string",
           "required": true
         },
         {
           "name": "text15",
-          "label": "15. 簡單說說需求",
+          "label": "15. 簡單說說需求 ",
           "type": "string",
           "required": true
         },
         {
           "name": "text16",
-          "label": "16. 產生 Email 草稿",
+          "label": "16. 產生 Email 草稿 ",
           "type": "string",
           "required": true
         },
@@ -726,19 +744,19 @@
         },
         {
           "name": "text2",
-          "label": "2. 有需求的地方，",
+          "label": "2. 關於產品、場所，",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 就有好內容的起點。",
+          "label": "3. 也關於讀者的每個提問。",
           "type": "string",
           "required": true
         },
         {
           "name": "text4",
-          "label": "4. 旅宿、餐飲與生活情境，從搜尋意圖走進品牌故事。",
+          "label": "4. 旅宿餐飲、婚禮與旅行主題，看看我如何整理資訊、安排架構，寫成一篇文章",
           "type": "string",
           "required": true
         },
@@ -768,31 +786,31 @@
         },
         {
           "name": "text10",
-          "label": "10. 好婚市集 SEO 作品區",
+          "label": "10. 好婚市集作品",
           "type": "string",
           "required": true
         },
         {
           "name": "text11",
-          "label": "11. 作品整理中。待補可驗證文章網址、作者署名或參與角色，…",
+          "label": "11. 目前沒有顯示中的好婚市集案例。",
           "type": "text",
           "required": true
         },
         {
           "name": "text12",
-          "label": "12. 目前尚無已核實的文章可供展示。",
+          "label": "12. 歡迎先閱讀其他類型的文章與案例。",
           "type": "string",
           "required": true
         },
         {
           "name": "text13",
-          "label": "13. 好婚市集作品整理中，待補可驗證文章資料。",
+          "label": "13. 可從各案例頁前往好婚市集閱讀完整文章。",
           "type": "string",
           "required": true
         },
         {
           "name": "text14",
-          "label": "14. 案例為原稿的結構與主題整理。封面為原創示意插畫，非品…",
+          "label": "14. 案例整理撰寫主題、文章架構與內容重點；有公開原文的作品另附連結。封面",
           "type": "string",
           "required": true
         }
@@ -807,19 +825,19 @@
       "fields": [
         {
           "name": "text1",
-          "label": "1. 下一篇好內容，",
+          "label": "1. 下一篇文章，",
           "type": "string",
           "required": true
         },
         {
           "name": "text2",
-          "label": "2. 從聊聊開始。",
+          "label": "2. 歡迎一起討論。",
           "type": "string",
           "required": true
         },
         {
           "name": "text3",
-          "label": "3. 告訴我您的品牌、讀者與目標，一起找到合適的內容方向。",
+          "label": "3. 告訴我您的品牌、想寫的主題與預計時程，我會協助整理適合的合作方向。",
           "type": "string",
           "required": true
         }
@@ -918,6 +936,40 @@
         },
         {
           "name": "d",
+          "label": "說明",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "research-methods",
+      "label": "撰寫與研究方式",
+      "type": "file",
+      "path": "src/content/research-methods.json",
+      "format": "json",
+      "list": true,
+      "fields": [
+        {
+          "name": "n",
+          "label": "編號",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "研究方式標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "en",
+          "label": "工具或英文標籤",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "desc",
           "label": "說明",
           "type": "text",
           "required": true

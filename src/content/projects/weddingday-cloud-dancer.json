@@ -1,0 +1,30 @@
+{
+  "brand": "WeddingDay 好婚市集",
+  "category": "wedding",
+  "color": "blue",
+  "originalUrl": "https://www.weddingday.com.tw/post/blog/article/2876",
+  "excerpt": null,
+  "excerptApproved": false,
+  "published": true,
+  "coverImage": "",
+  "coverAlt": "",
+  "role": "SEO 文章撰寫與架構規劃（依業主指定關鍵字）",
+  "slug": "weddingday-cloud-dancer",
+  "title": "Cloud Dancer 婚禮色彩，\n從趨勢介紹到搭配提案。",
+  "label": "婚禮色彩 × SEO 文章",
+  "intro": "以婚禮色彩為題，將趨勢資訊轉為準新人可參考的婚紗與佈置選擇。依指定關鍵字規劃架構並撰寫文章。",
+  "audience": "尋找婚禮配色與造型靈感的準新人",
+  "intent": "Cloud Dancer、婚禮配色、婚紗搭配",
+  "structure": [
+    "主題背景與讀者需求",
+    "色彩與材質的搭配方向",
+    "婚禮場景的應用",
+    "常見問題整理"
+  ],
+  "focus": [
+    "將色彩概念連結到籌備婚禮的實際選擇。",
+    "以段落與問答整理搭配資訊，兼顧搜尋與閱讀。"
+  ],
+  "issue": "05",
+  "order": 5
+}

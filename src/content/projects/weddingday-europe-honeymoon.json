@@ -1,0 +1,30 @@
+{
+  "brand": "WeddingDay 好婚市集",
+  "category": "wedding",
+  "color": "slate",
+  "originalUrl": "https://www.weddingday.com.tw/post/blog/article/2900",
+  "excerpt": null,
+  "excerptApproved": false,
+  "published": true,
+  "coverImage": "",
+  "coverAlt": "",
+  "role": "SEO 文章撰寫與架構規劃（依業主指定關鍵字）",
+  "slug": "weddingday-europe-honeymoon",
+  "title": "歐洲蜜月旅行，\n用教堂與古堡串起行程靈感。",
+  "label": "蜜月旅行 × SEO 文章",
+  "intro": "以歐洲蜜月為主題，整理教堂、古堡與旅行考量。依業主指定關鍵字規劃架構，結合景點介紹與讀者的行程需求。",
+  "audience": "規劃歐洲蜜月的新婚夫妻",
+  "intent": "歐洲蜜月、蜜月景點、教堂與古堡",
+  "structure": [
+    "蜜月旅行的選擇考量",
+    "教堂景點整理",
+    "古堡與特色建築",
+    "出發前的實用提醒"
+  ],
+  "focus": [
+    "用明確分類整理多個景點，方便讀者瀏覽比較。",
+    "將建築特色與旅行情境放在一起，提供行程靈感。"
+  ],
+  "issue": "06",
+  "order": 6
+}

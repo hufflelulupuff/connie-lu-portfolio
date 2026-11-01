@@ -15,7 +15,7 @@ const canonical=html.match(/rel="canonical" href="([^"]+)"/)?.[1];assert(canonic
 const home=html.match(/class="wordmark" href="([^"]+)"/)?.[1];assert(home);const prefix=home.replace(/\/$/,'');
 for(const m of html.matchAll(/(?:href|src)="([^"#]+)"/g)){let link=m[1].replace(/&amp;/g,'&');if(!link.startsWith('/'))continue;assert(link===prefix||link.startsWith(prefix+'/'),`Missing deployment base: ${link}`);let local=decodeURIComponent(link.slice(prefix.length)).split(/[?#]/)[0];let path=join(root,local);if(local.endsWith('/'))path=join(path,'index.html');assert((await stat(path).catch(()=>null))?.isFile(),`Broken local link ${link} in ${file}`);checked++;}
 assert(!html.includes('app.pagescms.org'),'Public site must not expose CMS navigation');
-for(const p of projectData){if(file.endsWith(join('work',p.slug,'index.html'))){assert(p.published);if(!p.excerptApproved)assert(html.includes('待確認公開授權'));}}
+for(const p of projectData){if(file.endsWith(join('work',p.slug,'index.html'))){assert(p.published);if(!p.excerptApproved&&!p.originalUrl)assert(html.includes('待確認公開授權'));if(p.originalUrl)assert(html.includes(`href="${p.originalUrl}"`),'Published original link must render');}}
 }
 const sitemap=await readFile(join(root,'sitemap-0.xml'),'utf8');assert(!sitemap.includes('/404'));assert.equal((sitemap.match(/<loc>/g)||[]).length,5+published.length);assert((await stat(join(root,'og.png'))).size>1000);assert((await readFile(join(root,'robots.txt'),'utf8')).includes('Sitemap:'));
 console.log(`PASS: ${htmls.length} pages, ${checked} internal links/assets, unique metadata, sitemap, OG and source privacy checks.`);
