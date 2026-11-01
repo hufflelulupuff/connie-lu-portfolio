@@ -6,8 +6,8 @@
   "excerpt": null,
   "excerptApproved": false,
   "published": true,
-  "coverImage": "",
-  "coverAlt": "",
+  "coverImage": "/media/editorial-europe-v1.webp",
+  "coverAlt": "歐洲街景與教堂的 AI 情境示意，非實際景點紀錄",
   "role": "SEO 文章撰寫與架構規劃（依業主指定關鍵字）",
   "slug": "weddingday-europe-honeymoon",
   "title": "歐洲蜜月旅行，\n用教堂與古堡串起行程靈感。",
@@ -26,5 +26,7 @@
     "將建築特色與旅行情境放在一起，提供行程靈感。"
   ],
   "issue": "06",
-  "order": 6
+  "order": 6,
+  "coverHeading": "歐洲蜜月\n建築風景",
+  "coverNote": "AI 情境示意・非品牌實景"
 }

@@ -186,6 +186,19 @@
           "description": "上傳圖片時必填，供無法看到圖片的讀者使用。"
         },
         {
+          "name": "coverHeading",
+          "label": "封面短標題（可換行）",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "coverNote",
+          "label": "圖片註記",
+          "type": "string",
+          "required": false,
+          "description": "AI 圖請保留情境示意註記；換成已授權的實景照片時可依實際來源調整。"
+        },
+        {
           "name": "originalUrl",
           "label": "已驗證原文網址",
           "type": "string",
@@ -590,6 +603,57 @@
           "name": "methodIntro",
           "label": "研究方式區塊介紹",
           "type": "text",
+          "required": true
+        },
+        {
+          "name": "sampleTitle",
+          "label": "文章架構示範標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "sampleIntro",
+          "label": "文章架構示範介紹",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "sampleKeywords",
+          "label": "示範搜尋用語",
+          "type": "string",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        },
+        {
+          "name": "sampleChecks",
+          "label": "示範檢核問題",
+          "type": "string",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        },
+        {
+          "name": "sampleH1",
+          "label": "示範 H1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "sampleSections",
+          "label": "示範 H2 清單",
+          "type": "string",
+          "required": true,
+          "list": {
+            "min": 1
+          }
+        },
+        {
+          "name": "sampleNote",
+          "label": "示範註記",
+          "type": "string",
           "required": true
         }
       ]

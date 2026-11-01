@@ -46,7 +46,8 @@ pnpm preview
 - `src/content/projects/*.json`：案例內容、分類、原文連結、節錄與顯示設定。
 - `src/content/research-methods.json`：產品研究、數據選詞、H1/H2 架構與 GEO 輔助檢視方式。
 - `src/styles/global.css`：配色、版面、手機版及減少動態效果設定。
-- `src/components/Cover.astro`：原創 CSS 編輯封面，不含品牌實景照片。
+- `src/components/Cover.astro`：攝影式情境圖搭配可編輯短標題；六張 AI 圖位於 public/media，非品牌實景照片。
+- `ASSET-NOTES.md`：六張情境圖的生成方式、提示詞與使用說明。
 - `public/og.png`：1200 × 630 分享圖；品牌改名時請同步更新。
 
 內容後台使用 Pages CMS；請見 [EDITING.md](EDITING.md)。新增／下架作品會自動更新頁數、篩選數量與 sitemap，不必修改程式碼。首頁依排序展示已發布案例。

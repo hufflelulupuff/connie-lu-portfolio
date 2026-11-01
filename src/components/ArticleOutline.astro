@@ -1,0 +1,18 @@
+---
+import copy from '../content/services.json';
+---
+<aside id="article-outline" class="outline-example" aria-label="文章架構規劃示範">
+  <div class="outline-notes">
+    <p class="eyebrow">CONTENT STUDIO / SAMPLE</p>
+    <h3>{copy.sampleTitle}</h3>
+    <p>{copy.sampleIntro}</p>
+    <div class="keyword-chips">{copy.sampleKeywords.map(k=><span>{k}</span>)}</div>
+    <ol class="outline-checks">{copy.sampleChecks.map((item,i)=><li><span>0{i+1}</span>{item}</li>)}</ol>
+  </div>
+  <div class="outline-sheet">
+    <header><span>ARTICLE OUTLINE</span><span>CONNIE LU.</span></header>
+    <div class="outline-line"><span>H1</span><p>{copy.sampleH1}</p></div>
+    {copy.sampleSections.map(item=><div class="outline-line"><span>H2</span><p>{item}</p></div>)}
+    <p class="outline-note">{copy.sampleNote}</p>
+  </div>
+</aside>
