@@ -219,6 +219,31 @@
           "type": "text",
           "required": false,
           "description": "所有儲存內容都會寫入公開儲存庫；未授權內容請不要貼入，即使未勾選上方開關。"
+        },
+        {
+          "name": "articleApproved",
+          "label": "公開文章文字版",
+          "type": "boolean",
+          "required": false,
+          "description": "開啟後會發布下方全文至公開網站與儲存庫。只放可公開的文章內容，勿放內部註記或私人連結。"
+        },
+        {
+          "name": "archiveSummary",
+          "label": "活動下架說明／文字版摘要",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "articleTitle",
+          "label": "文字版文章標題",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "articleBody",
+          "label": "完整文章文字版（支援 ## 標題與清單）",
+          "type": "text",
+          "required": false
         }
       ]
     },
@@ -487,6 +512,18 @@
           "label": "17. 網站資料的分析範圍，依專案需求與授權確認。",
           "type": "string",
           "required": true
+        },
+        {
+          "name": "portrait",
+          "label": "關於我的照片",
+          "type": "image",
+          "required": false
+        },
+        {
+          "name": "portraitAlt",
+          "label": "個人照片說明",
+          "type": "string",
+          "required": false
         }
       ]
     },

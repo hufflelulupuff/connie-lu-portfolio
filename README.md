@@ -47,6 +47,7 @@ pnpm preview
 - `src/content/research-methods.json`：產品研究、數據選詞、H1/H2 架構與 GEO 輔助檢視方式。
 - `src/styles/global.css`：配色、版面、手機版及減少動態效果設定。
 - `src/components/Cover.astro`：攝影式情境圖搭配可編輯短標題；原文圖片與尚待替換的 AI 圖位於 public/media，來源與示意狀態依案例標註。
+- `src/pages/work/[slug]/article.astro`：經確認可公開的歷史文章文字版，獨立網址與活動時效說明；設定 noindex 並排除 sitemap，案例介紹仍正常索引。
 - `ASSET-NOTES.md`：圖片來源、情境圖提示詞與使用說明。
 - `public/og.png`：1200 × 630 分享圖；品牌改名時請同步更新。
 
@@ -56,7 +57,7 @@ pnpm preview
 
 ## 公開內容原則
 
-四個案例依使用者提供的文章整理主題與結構，沒有把原稿全文或私人 Drive 連結放進網站。`originalUrl` 未核實時保持 null；`excerpt` 及 `excerptApproved` 預設空值 / false。只有確認可公開的節錄才同時設定文字和 `excerptApproved: true`。不把客戶原稿放進 repository，即使設為 draft 也不要提交。
+四個檔期案例原先以主題與結構介紹。使用者於 2026-11-01 明確要求提供文章文字版，現已建立四個獨立閱讀頁；不公開私人 Drive 連結、文件 ID、註解或其他內部資料。`originalUrl` 未核實時保持 null；`excerpt` 及 `excerptApproved` 預設空值 / false。只有確認可公開的節錄才同時設定文字和 `excerptApproved: true`。未經確認可公開的原稿，不放進 repository，即使設為 draft 也不要提交。已確認公開的文字版使用 articleApproved、articleTitle、articleBody 與 archiveSummary，並在頁面標示活動已結束。
 
 已收錄烏日璞旅婚宴官網文章與兩篇好婚市集使用者確認的 SEO 撰稿作品，以案例介紹及公開原文連結呈現，不轉載全文；好婚市集原刊登頁使用平台編輯帳號。案例沒有 SEO 排名、流量、詢問數或營收主張。GA4 沒有證照或成效宣稱，也未裝追蹤碼。
 

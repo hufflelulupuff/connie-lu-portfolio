@@ -81,3 +81,16 @@ Use case: photorealistic-natural. Asset type: portfolio editorial cover photogra
 烏日璞旅尾牙案例也使用同飯店官網宴會廳照，僅介紹場地，不宣稱照片為尾牙活動實拍。
 
 待補照片：大湖璞旅尾牙春酒、烏山拾味圍爐年菜、大湖璞旅春節聚餐。這三篇尚無公開原文網址可擷取對應照片，保留原有清楚標示的 AI 封面，等待使用者提供照片或原文。
+
+## 使用者提供圖片（2026-11-01）
+
+依使用者指定用途套用，沒有重新生成、修臉或改變照片內容；只等比例縮圖及 WebP 壓縮。
+
+| 圖片順序 | 網站用途 | 網站資產 |
+| --- | --- | --- |
+| 圖一 | 大湖璞旅尾牙春酒 | public/media/dahu-year-end-supplied.webp |
+| 圖二 | 烏山拾味春晝餐敘・圍爐宴 | public/media/wushan-spring-lunch-supplied.webp |
+| 圖三 | 烏日璞旅婚宴 | public/media/wuri-wedding-menu-supplied.webp |
+| 圖四 | 關於我 | public/media/connie-lu-portrait.webp |
+
+圖片來源標示為使用者提供，不推定 Connie 為攝影者。大湖璞旅春節家庭聚餐仍待提供指定照片。
